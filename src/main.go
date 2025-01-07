@@ -11,9 +11,9 @@ import (
 func main() {
 	fmt.Println("Hello world!")
 
-	urls := []string{"https://sportsbook.draftkings.com/leagues/basketball/nba",
-		"https://www.geeksforgeeks.org/how-to-use-ellipsis-in-golang/",
-		"https://www.geeksforgeeks.org/how-to-use-ellipsis-in-golang/"}
+	urls := []string{"sportsbook.draftkings.com",
+		"www.geeksforgeeks.org",
+	}
 
 	// Instantiate default collector
 	c := colly.NewCollector(
@@ -38,7 +38,7 @@ func main() {
 		fmt.Println("Visiting", r.URL.String())
 	})
 
-	// Start scraping on https://hackerspaces.org
-	c.Visit("https://hackerspaces.org/")
+	// Start scraping on ...
+	c.Visit("https://sportsbook.draftkings.com/leagues/basketball/nba")
 
 }
